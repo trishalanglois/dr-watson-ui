@@ -8,7 +8,7 @@ You can run existing tests with `npm test`.
 
 ### Expectations / Rules
 
-We currently have an Chat application using the [Watson Assistant API](https://cloud.ibm.com/docs/services/assistant?topic=assistant-api-overview).  We have the backend setup, but are having a few bugs/errors we are running into on the frontend.  We would like you to go through and fix the bugs, update the tests, and implement a new feature on it as well.
+We currently have an Chat application using the [Watson Assistant API](https://cloud.ibm.com/docs/services/assistant?topic=assistant-api-overview).  The purpose of this application is to replace the surveys that students fill out every week.  We are still working on the API so conversations are short currently, but it will respond back based on your feedback.  We have the backend setup, but are having a few bugs/errors in the frontend.  We would like you to go through and fix the bugs, update the tests, and implement a new feature on it as well.
 
 You will have 3 hours to work on this.
 
