@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+main input {
+  border: none;
+  font-size: 16px;
+  height: 50px;
+  /* margin-left: 20px; */
+  width: 70%;
+  outline: none;
+}
+
+.messenger {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  width: 70%;
+}
+
+.messenger input {
+  border-radius: 50px;
+  padding-left: 20px;
+  height: 60%;
+  width: 70%;
+}
+
+.messenger button {
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFF;
+  width: 20%;
+  height: 60%;
+  border: none;
+  background: #46be28;
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  overflow-y: scroll;
+  width: 70%;
+}

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should match the snapshot with a ChatBox if the user has signed in 1`] = `
+<div
+  className="App"
+>
+  <Connect(Header)
+    signOut={[Function]}
+  />
+  <Connect(ChatBox)
+    addMessage={[Function]}
+    messages={Array []}
+  />
+</div>
+`;
+
+exports[`App component should match the snapshot with a WelcomeModal if the user hasn't signed in yet 1`] = `
+<div
+  className="App"
+>
+  <Connect(Header)
+    signOut={[Function]}
+  />
+  <Connect(WelcomeModal)
+    addMessage={[Function]}
+  />
+</div>
+`;

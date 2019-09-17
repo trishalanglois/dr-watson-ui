@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatBox component should match the snapshot rendering all messages 1`] = `
+<main
+  className="chat-container"
+>
+  <section
+    className="conversation"
+  >
+    <Message
+      isUser={false}
+      key="message0"
+      message="Hello, I am Dr. Watson.  My understanding is that you are feeling tired.  Have you been feeling anxious this week?"
+    />
+    <Message
+      isUser={true}
+      key="message1"
+      message="Absolutely.  I feel like I am struggling to keep up."
+    />
+  </section>
+  <section
+    className="messenger"
+  >
+    <input
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Chat with Survey Bot here..."
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </section>
+</main>
+`;
+
+exports[`ChatBox component should match the snapshot rendering an error if there is an errorMsg in the store 1`] = `
+<main
+  className="chat-container"
+>
+  <section
+    className="conversation"
+  >
+    <Message
+      isUser={false}
+      key="message0"
+      message="Hello, I am Dr. Watson.  My understanding is that you are feeling tired.  Have you been feeling anxious this week?"
+    />
+    <Message
+      isUser={true}
+      key="message1"
+      message="Absolutely.  I feel like I am struggling to keep up."
+    />
+    <p
+      className="message watson error"
+    >
+      fetch failed.
+    </p>
+  </section>
+  <section
+    className="messenger"
+  >
+    <input
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Chat with Survey Bot here..."
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </section>
+</main>
+`;

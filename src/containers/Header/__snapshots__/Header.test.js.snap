@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should match the snapshot displaying a logout button if there is a user 1`] = `
+<header>
+  <h1>
+    Dr. Watson
+  </h1>
+  <button
+    onClick={[MockFunction]}
+  >
+    Sign Out
+  </button>
+</header>
+`;
+
+exports[`Header component should match the snapshot with just the title if there is no user 1`] = `
+<header>
+  <h1>
+    Dr. Watson
+  </h1>
+</header>
+`;

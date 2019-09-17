@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomeModal component should display an error message if not all of the inputs have been filled 1`] = `
+<form
+  className="welcome-modal"
+>
+  <legend>
+    Welcome to Survey Bot!  Please enter your name.
+  </legend>
+  <p
+    className="error-msg"
+  >
+    Please make sure you have filled everything out.
+  </p>
+  <label>
+    First Name:
+    <input
+      name="firstName"
+      onChange={[Function]}
+      value="Travis"
+    />
+  </label>
+  <label>
+    Last Name:
+    <input
+      name="lastName"
+      onChange={[Function]}
+      value=""
+    />
+  </label>
+  <select
+    name="feeling"
+    onChange={[Function]}
+    value="Happy"
+  >
+    <option
+      value=""
+    >
+      How are you feeling currently?
+    </option>
+    <option
+      value="happy"
+    >
+      Happy
+    </option>
+    <option
+      value="tired"
+    >
+      Tired
+    </option>
+    <option
+      value="stressed"
+    >
+      Stressed
+    </option>
+    <option
+      value="frustrated"
+    >
+      Frustrated
+    </option>
+  </select>
+  <button
+    onClick={[Function]}
+  >
+    Take 5 minutes to check in!
+  </button>
+</form>
+`;
+
+exports[`WelcomeModal component should match the snapshot if there are no errors 1`] = `
+<form
+  className="welcome-modal"
+>
+  <legend>
+    Welcome to Survey Bot!  Please enter your name.
+  </legend>
+  <label>
+    First Name:
+    <input
+      name="firstName"
+      onChange={[Function]}
+      value="Travis"
+    />
+  </label>
+  <label>
+    Last Name:
+    <input
+      name="lastName"
+      onChange={[Function]}
+      value="Rollins"
+    />
+  </label>
+  <select
+    name="feeling"
+    onChange={[Function]}
+    value="Happy"
+  >
+    <option
+      value=""
+    >
+      How are you feeling currently?
+    </option>
+    <option
+      value="happy"
+    >
+      Happy
+    </option>
+    <option
+      value="tired"
+    >
+      Tired
+    </option>
+    <option
+      value="stressed"
+    >
+      Stressed
+    </option>
+    <option
+      value="frustrated"
+    >
+      Frustrated
+    </option>
+  </select>
+  <button
+    onClick={[Function]}
+  >
+    Take 5 minutes to check in!
+  </button>
+</form>
+`;

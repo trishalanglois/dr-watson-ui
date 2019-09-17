@@ -1,0 +1,50 @@
+.message {
+  background: #61dafb;
+  border-radius: .5em;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+
+.message:after {
+  border: 10px solid transparent;
+  border-right-color: #61dafb;;
+  border-bottom: 0;
+  border-left: 0;
+  content: '';
+  height: 0;
+  left: 0;
+  margin-left: -10px;
+  position: absolute;
+  top: 70%;
+  width: 0;
+}
+
+.watson {
+  align-self: flex-end;
+  color: #FFF;
+  background: rgba(95, 140, 200, 0.8);
+}
+
+.watson:after {
+  border: 10px solid transparent;
+  border-left-color: rgba(95, 140, 200, 0.8);
+  border-right: 0;
+  border-bottom: 0;
+  left: auto;
+  margin-right: -10px;
+  right: 0;
+}
+
+.error {
+  background: rgba(243, 41, 41, 0.8);
+}
+
+.error:after {
+  border-left-color: rgba(243, 41, 41, 0.8);
+}
