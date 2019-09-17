@@ -18,7 +18,7 @@ You will have 3 hours to work on this.
 #### Dr Watson Chat Screenshot
 ![dr-watson-chat-screenshot](./assets/dr-watson-chat-screenshot.png)
 
-**Important Note:** *There might be one or two things in the codebase that you might be unfamiliar with.  No worries, you will not need to understand how these work in order to pass this.  For example: do not worry about the `ref` or `createRef` inside of ChatBox or what is happening inside of `componentDidUpdate()` 
+**Important Note:** *There might be one or two things in the codebase that you might be unfamiliar with.  No worries, you will not need to understand how these work in order to pass this.  For example: do not worry about the `ref` or `createRef` inside of ChatBox or what is happening inside of `componentDidUpdate()`* 
 
 ### Endpoints
 
