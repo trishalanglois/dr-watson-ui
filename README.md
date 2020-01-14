@@ -48,7 +48,7 @@ Note that all of the endpoints require a header of "Content-Type" with a value o
 | Purpose | URL | Verb | Request Body | Sample Success Response |
 |----|----|----|----|----|
 | Start a conversation with Dr. Watson | `https://drwatson-api.herokuapp.com/api/v1/start_session` | POST | `{ "feeling": <String> }` | `{ "message": "Hello, I am Dr. Watson..." }` |
-| Send a message to Dr. Watson and get a reply message back | `https://drwatson-api.herokuapp.com/api/message` | POST | `{ "message": <String> }` | `{ "message": "I appreciate the feedback..." }` |
+| Send a message to Dr. Watson and get a reply message back | `https://drwatson-api.herokuapp.com/api/message` | POST | `{ "newMessage": <String> }` | `{ "message": "I appreciate the feedback..." }` |
 | End the session with Dr. Watson | `https://drwatson-api.herokuapp.com/api/v1/end_session` | GET | none | 200 status code, no response body content |
 
 
