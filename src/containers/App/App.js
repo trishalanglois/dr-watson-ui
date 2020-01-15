@@ -13,10 +13,6 @@ export class App extends Component {
     super(props);
   }
 
-  // clearMessages = () => {
-  //   this.setState({ messages: [] });
-  // }
-
   signOut = async () => {
     try {
       await endConversation();
@@ -29,7 +25,6 @@ export class App extends Component {
 
   render() {
     const { user } = this.props;
-    // const { messages } = this.state;
     return (
       <div className="App">
         <Header signOut={this.signOut} />
@@ -49,7 +44,5 @@ export const mapDispatchToProps = dispatch =>  bindActionCreators({
   hasErrored,
   clearMessages
  }, dispatch);
-
-// Updates to that local state are handled by the addMessage and clearMessages methods. We would like you to convert this over to the Redux global store. Convert the methods to actions and add a new reducer called messages and connect them to the components that need access to that data/functionality.
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
