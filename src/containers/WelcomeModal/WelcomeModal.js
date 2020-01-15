@@ -20,16 +20,25 @@ export class WelcomeModal extends Component {
     this.setState({ [e.target.name]: e.target.value, error: '' });
   }
 
+  // Add in a check that the user has included a firstName, lastName, and feeling before the handleSubmit creates a newUser. If one of the inputs is missing, utilize the error in state. An error tag has been provided for you in the render.
+
   handleSubmit = e => {
     const { firstName, lastName, feeling } = this.state;
     e.preventDefault();
-    this.props.createUser({
-      id: Date.now(),
-      firstName,
-      lastName,
-      feeling,
-    });
-    this.connectToChatBot();
+
+    if (!firstName || !lastName || !feeling) {
+      this.setState({
+        error: 'Please enter all required fields'
+      })
+    } else {
+      this.props.createUser({
+        id: Date.now(),
+        firstName,
+        lastName,
+        feeling,
+      });
+      this.connectToChatBot();
+    }
   }
 
   connectToChatBot = async () => {
@@ -68,6 +77,8 @@ export class WelcomeModal extends Component {
           <option value="stressed">Stressed</option>
           <option value="frustrated">Frustrated</option>
         </select>
+
+
         <button onClick={this.handleSubmit}>
           Take 5 minutes to check in!
         </button>
