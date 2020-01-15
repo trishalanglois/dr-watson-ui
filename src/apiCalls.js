@@ -18,8 +18,6 @@ export const startConversation = async feeling => {
   return data;
 }
 
-// Currently if you try to respond back to Dr Watson after his initial response, an error shows up saying "Cannot read property 'message' of undefined". This is because the postMessage function in your apiCalls hasn't been completed. Using the docs below, implement the fetch. You should get a response back with a message object if the fetch is successful. Return the message object in order to fix the error.
-
 export const postMessage = async newMessage => {
   const url = 'https://drwatson-api.herokuapp.com/api/message'
   const options = {
