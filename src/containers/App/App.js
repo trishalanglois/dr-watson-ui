@@ -4,32 +4,24 @@ import { bindActionCreators } from 'redux';
 import Header from '../Header/Header';
 import WelcomeModal from '../WelcomeModal/WelcomeModal';
 import ChatBox from '../ChatBox/ChatBox';
-import { removeUser, hasErrored } from '../../actions';
+import { removeUser, hasErrored, clearMessages } from '../../actions';
 import { endConversation } from '../../apiCalls';
 import './App.css';
 
 export class App extends Component {
-  constructor() {
-    super();
-    // this.state = {
-    //   messages: []
-    // }
+  constructor(props) {
+    super(props);
   }
 
-  // addMessage = (message, isUser) => {
-  //   const { messages } = this.state;
-  //   this.setState({ messages: [...messages, { message, isUser }]});
+  // clearMessages = () => {
+  //   this.setState({ messages: [] });
   // }
-
-  clearMessages = () => {
-    this.setState({ messages: [] });
-  }
 
   signOut = async () => {
     try {
       await endConversation();
       this.props.removeUser();
-      this.clearMessages();
+      this.props.clearMessages();
     } catch({ message }) {
       this.props.hasErrored(message);
     }
@@ -54,7 +46,8 @@ export const mapStateToProps = ({ user }) => ({
 
 export const mapDispatchToProps = dispatch =>  bindActionCreators({
   removeUser,
-  hasErrored
+  hasErrored,
+  clearMessages
  }, dispatch);
 
 // Updates to that local state are handled by the addMessage and clearMessages methods. We would like you to convert this over to the Redux global store. Convert the methods to actions and add a new reducer called messages and connect them to the components that need access to that data/functionality.
