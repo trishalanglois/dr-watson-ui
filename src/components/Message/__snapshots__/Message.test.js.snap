@@ -4,7 +4,9 @@ exports[`Message should have a class if the message was made by the Watson API 1
 <section
   className="message watson"
 >
-  <p />
+  <p>
+    My name is Dr. Watson.  I am excited to hear that your week has been going well.
+  </p>
 </section>
 `;
 
@@ -12,6 +14,8 @@ exports[`Message should match the snapshot if the message is made by the user 1`
 <section
   className="message"
 >
-  <p />
+  <p>
+    I have been having a terrific week!
+  </p>
 </section>
 `;

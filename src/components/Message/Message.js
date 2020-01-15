@@ -4,7 +4,7 @@ import './Message.css';
 const Message = ({ message, isUser }) => {
   return (
     <section className={isUser ? 'message' : 'message watson'}>
-      <p>{message.message}</p>
+      <p>{message}</p>
     </section>
   )
 }
