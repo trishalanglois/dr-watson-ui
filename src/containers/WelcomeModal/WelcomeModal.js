@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { createUser, hasErrored } from '../../actions'
+import { createUser, hasErrored, addMessage } from '../../actions'
 import { startConversation } from '../../apiCalls';
 import './WelcomeModal.css'
 
 export class WelcomeModal extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       firstName: '',
       lastName: '',
@@ -19,8 +19,6 @@ export class WelcomeModal extends Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value, error: '' });
   }
-
-  // Add in a check that the user has included a firstName, lastName, and feeling before the handleSubmit creates a newUser. If one of the inputs is missing, utilize the error in state. An error tag has been provided for you in the render.
 
   handleSubmit = e => {
     const { firstName, lastName, feeling } = this.state;
@@ -87,6 +85,6 @@ export class WelcomeModal extends Component {
   }
 }
 
-export const mapDispatchToProps = dispatch => bindActionCreators({ createUser, hasErrored }, dispatch)
+export const mapDispatchToProps = dispatch => bindActionCreators({ createUser, hasErrored, addMessage }, dispatch)
 
 export default connect(null, mapDispatchToProps)(WelcomeModal);
