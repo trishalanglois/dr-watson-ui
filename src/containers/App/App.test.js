@@ -13,9 +13,9 @@ describe('App component', () => {
 
   beforeEach(() => {
     const mockUser = {
-      id: 1568665187737, 
-      firstName: "Travis", 
-      lastName: "Rollins", 
+      id: 1568665187737,
+      firstName: "Travis",
+      lastName: "Rollins",
       feeling: "tired"
     };
 
@@ -62,9 +62,9 @@ describe('App component', () => {
 describe('mapStateToProps', () => {
   it('should return an object with the user information', () => {
     const mockUser = {
-      id: 1568665187737, 
-      firstName: "Travis", 
-      lastName: "Rollins", 
+      id: 1568665187737,
+      firstName: "Travis",
+      lastName: "Rollins",
       feeling: "tired"
     };
 
@@ -81,7 +81,7 @@ describe('mapStateToProps', () => {
     }
 
     const mappedProps = mapStateToProps(mockState);
-    
+
     expect(mappedProps).toEqual(expected);
   });
 });
@@ -106,4 +106,15 @@ describe('mapDispatchToProps', () => {
 
     expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
+
+  if('calls dispatch with a clearMessages action when clearMessages is called', () => {
+    const mockDispatch = jest.fn();
+    const actionToDispatch = clearMessages();
+
+    const mappedProps = mapDispatchToProps(mockDispatch);
+    mappedProps.clearMessages();
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+  });
+  
 });

@@ -13,10 +13,12 @@ describe('ChatBox component', () => {
   const mockMessages = [
     {
       message: "Hello, I am Dr. Watson.  My understanding is that you are feeling tired.  Have you been feeling anxious this week?",
+      i: 0,
       isUser: false
     },
     {
       message: "Absolutely.  I feel like I am struggling to keep up.",
+      i: 1,
       isUser: true
     }
   ];
